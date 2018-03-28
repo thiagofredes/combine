@@ -27,7 +27,7 @@ public class Running : PlayerState
 			if(Input.GetMouseButtonDown(0)){
 				player.SetState(new Attacking(this.player));
 			}
-			else if(Input.GetMouseButton(1)){
+			else if(Input.GetMouseButtonDown(1)){
 				player.SetState(new UsingSkill(this.player));
 			}
 

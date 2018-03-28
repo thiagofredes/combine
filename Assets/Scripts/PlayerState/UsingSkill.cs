@@ -9,7 +9,11 @@ public class UsingSkill : PlayerState {
 	}
 
 	public override void OnEnter(){
-		this.player.animator.SetTrigger("Skill");
+		player.animator.SetTrigger("Skill");		
+	}
+
+	public override void LateUpdate(){
+		player.mouth.transform.LookAt(player.transform.position + player.transform.forward);
 	}
 
 	public override void OnAnimationEvent(string ev){

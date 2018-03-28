@@ -11,7 +11,9 @@ public class PlayerController : BaseGameObject
 
 	public string[] layersToIgnoreWhenFalling;
 
-	public Animator animator;	
+	public Animator animator;
+
+	public GameObject mouth;
 
     public int life;
 

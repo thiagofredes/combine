@@ -522,6 +522,38 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+--- !u!4 &906301040 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400096, guid: ff3dd417bb566b849b752ce57810bbf5, type: 2}
+  m_PrefabInternal: {fileID: 823700123}
+--- !u!1 &979483381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 979483382}
+  m_Layer: 8
+  m_Name: Mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &979483382
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 979483381}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.014, y: -0.176, z: 0.079}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 906301040}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214891061
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +740,7 @@ MonoBehaviour:
   movementSpeed: 1
   layersToIgnoreWhenFalling: []
   animator: {fileID: 823700126}
+  mouth: {fileID: 979483381}
   life: 0
 --- !u!4 &1881043202
 Transform:
