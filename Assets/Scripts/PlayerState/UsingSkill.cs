@@ -5,11 +5,16 @@ using UnityEngine;
 public class UsingSkill : PlayerState {
 
 	public UsingSkill(PlayerController player){
-		this.player = player;
+		this.player = player;		
 	}
 
 	public override void OnEnter(){
+		player.mouth.SkillEnded += OnSkillEnded;
 		player.animator.SetTrigger("Skill");		
+	}
+
+	public override void OnExit(){
+		player.mouth.SkillEnded -= OnSkillEnded;
 	}
 
 	public override void LateUpdate(){
@@ -17,8 +22,13 @@ public class UsingSkill : PlayerState {
 	}
 
 	public override void OnAnimationEvent(string ev){
-		if(ev == "ReturnMovement"){
-			player.SetState(new Running(this.player));
+		if(ev == "StartSkill"){
+			player.mouth.UseSkill();
 		}
+	}
+
+	private void OnSkillEnded(){
+		player.animator.SetTrigger("SkillEnded");
+		player.SetState(new Running(player));
 	}
 }

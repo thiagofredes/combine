@@ -13,7 +13,7 @@ public class PlayerController : BaseGameObject
 
 	public Animator animator;
 
-	public GameObject mouth;
+	public SkillManager mouth;
 
     public int life;
 
